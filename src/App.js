@@ -9,14 +9,7 @@ function App() {
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
-  useEffect(() => {
-    getFromLocalStorage();
-  }, []);
-
-  useEffect(() => {
-    filterHandler();
-    saveToLocalStorage();
-  }, [todos, status,filterHandler,saveToLocalStorage]);
+  
 
   const filterHandler = () => {
     switch (status) {
@@ -45,6 +38,15 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    getFromLocalStorage();
+  }, []);
+
+  useEffect(() => {
+    filterHandler();
+    saveToLocalStorage();
+  }, [todos, status,filterHandler,saveToLocalStorage]);
+  
   return (
     <div className="App">
       <header>
