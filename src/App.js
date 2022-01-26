@@ -45,7 +45,7 @@ function App() {
   useEffect(() => {
     filterHandler();
     saveToLocalStorage();
-  }, []);
+  });
   
   return (
     <div className="App">
