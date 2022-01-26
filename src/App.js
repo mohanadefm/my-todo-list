@@ -45,7 +45,7 @@ function App() {
   useEffect(() => {
     filterHandler();
     saveToLocalStorage();
-  }, [todos, status]);
+  }, []);
   
   return (
     <div className="App">
